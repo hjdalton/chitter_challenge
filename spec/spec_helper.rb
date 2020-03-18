@@ -13,18 +13,14 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-ENV['RACK_ENV'] = 'test'
-ENV['ENVIRONMENT'] = 'test'
-# Bring in the contents of the `app.rb` file. The below is equivalent to: require_relative '../app.rb'
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
-require_relative './setup_test_database'
 # Require all the testing gems
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-
 require 'simplecov'
 require 'simplecov-console'
+
+require_relative './setup_test_database'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
@@ -32,6 +28,12 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   # SimpleCov::Formatter::HTMLFormatter
 ])
 SimpleCov.start
+
+ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
+
+# Bring in the contents of the `app.rb` file. The below is equivalent to: require_relative '../app.rb'
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = Chitter
@@ -41,6 +43,7 @@ RSpec.configure do |config|
     setup_test_database
   end
 end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
