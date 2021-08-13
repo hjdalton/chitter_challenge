@@ -1,8 +1,6 @@
-require 'pg'
-
 class Messages
   
-  def posts
+  def self.posts
     "This is a peep!"
   end
 
