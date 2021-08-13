@@ -1,7 +1,18 @@
+require 'pg' 
+
 class Messages
   
   def self.posts
-    "This is a peep!"
-  end
+    # if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'chitter_test')
+    # else 
+    #   connection = PG.connect(dbname: 'chitter')
+    # end
 
+    result = connection.exec("SELECT message FROM peeps;")
+    puts "****"
+    p result
+    puts "****"
+    result.map { |peeps| peeps['message']}
+  end
 end
