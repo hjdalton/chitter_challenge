@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative './lib/messages.rb'
 
 class Chitter < Sinatra::Base
   get '/test' do
@@ -6,6 +7,7 @@ class Chitter < Sinatra::Base
   end
 
   get '/' do
+    @messages = Messages.posts
     erb :index
   end
 

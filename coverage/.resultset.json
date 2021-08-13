@@ -4,36 +4,51 @@
       "/Users/heatherdalton/makers_projects/databases/chitter/chitter-challenge-apprenticeships/app.rb": {
         "lines": [
           1,
+          1,
           null,
           1,
           1,
           1,
           null,
           null,
+          1,
           1,
           0,
           null,
           null,
           1,
+          null
+        ]
+      },
+      "/Users/heatherdalton/makers_projects/databases/chitter/chitter-challenge-apprenticeships/lib/messages.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/heatherdalton/makers_projects/databases/chitter/chitter-challenge-apprenticeships/spec/features/messages_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          0,
+          null,
           null
         ]
       },
       "/Users/heatherdalton/makers_projects/databases/chitter/chitter-challenge-apprenticeships/spec/features/post_message_spec.rb": {
         "lines": [
 
-        ]
-      },
-      "/Users/heatherdalton/makers_projects/databases/chitter/chitter-challenge-apprenticeships/spec/features/show_message_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          0,
-          null,
-          0,
-          null,
-          null
         ]
       },
       "/Users/heatherdalton/makers_projects/databases/chitter/chitter-challenge-apprenticeships/spec/features/test_page_spec.rb": {
@@ -47,6 +62,6 @@
         ]
       }
     },
-    "timestamp": 1628845877
+    "timestamp": 1628847305
   }
 }
