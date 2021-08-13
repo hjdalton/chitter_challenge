@@ -4,9 +4,6 @@ require_relative './lib/messages.rb'
 require_relative './lib/new_peep.rb'
 
 class Chitter < Sinatra::Base
-  get '/test' do
-    'Test page'
-  end
 
   enable :sessions
 
