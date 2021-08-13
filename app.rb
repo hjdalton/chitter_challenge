@@ -5,5 +5,9 @@ class Chitter < Sinatra::Base
     'Test page'
   end
 
+  get '/' do
+    erb :index
+  end
+
   run! if app_file == $0
 end
